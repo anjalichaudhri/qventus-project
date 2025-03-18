@@ -2,15 +2,14 @@ import { test } from "@playwright/test";
 
 import LoginPage from '../pages/LoginPage';
 
-
 // Test for login with invalid credentials
 test('Login with bad username', async ({ page }) => {
   const loginPage = new LoginPage(page);
   test.setTimeout(120000);
   await loginPage.goto();
-  await loginPage.enterUsername('BadUser');
+  await loginPage.enterUsername(process.env.LOGIN_INVALID_EMAIL);
   await loginPage.clickNext();
-  await loginPage.enterPassword('BadPassword');
+  await loginPage.enterPassword(process.env.LOGIN_INVALID_PASSWORD);
   await loginPage.clickSignIn();
   await loginPage.assertErrorMessage('Unable to sign in');
 });
