@@ -5,6 +5,8 @@
   "scripts": {
     "run:ui": "npx playwright test --ui",
     "run:headed": "npx playwright test",
+    "run:chromium": "npx playwright test --project=chromium",
+    "run:debug": "npx playwright test --debug",
     "run:report": "npx playwright show-report"
   },
   "keywords": [],
