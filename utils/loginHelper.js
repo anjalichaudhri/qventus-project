@@ -1,4 +1,4 @@
-const { chromium } = require('@playwright/test');
+import { chromium } from '@playwright/test';
 import LoginPage from '../pages/LoginPage';
 
 async function setupLoginPage() {

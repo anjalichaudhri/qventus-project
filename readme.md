@@ -1,20 +1,20 @@
-initialize project
+1. initialize project
 npm init -y
 
-install playwright
+2. install playwright
 npm install playwright
 
-install browsers
+3. install browsers
 npm playwright install
 
 // check version
-npx playwright --version
+4. npx playwright --version
 
-npm init playwright@latest
+5. npm init playwright@latest
 
-created playwrigth.config.js file
+    created playwrigth.config.js file
 
-Inside that directory, you can run several commands:
+6. Inside that directory, you can run several commands:
 
   npx playwright test
     Runs the end-to-end tests.
